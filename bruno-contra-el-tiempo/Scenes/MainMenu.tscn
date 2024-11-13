@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://blc7hsh5njroe"]
+
+[ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_wiy2c"]
+[ext_resource type="Texture2D" uid="uid://cmyv1w2jrcs5u" path="res://Assets/FINAL SIN BOTONES.jpg" id="2_0fprh"]
+[ext_resource type="Texture2D" uid="uid://cd56m2sm6o2ts" path="res://Assets/boton-reproducir-ahora-11876588-9686039.webp" id="3_u7uax"]
+[ext_resource type="Texture2D" uid="uid://dhbj1164ocbru" path="res://Assets/9686015.webp" id="4_2r5cw"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_wiy2c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(568, 320)
+texture = ExtResource("2_0fprh")
+
+[node name="Jugar" type="Button" parent="."]
+offset_left = 467.0
+offset_top = 343.0
+offset_right = 925.0
+offset_bottom = 801.0
+scale = Vector2(0.5, 0.5)
+action_mode = 0
+icon = ExtResource("3_u7uax")
+flat = true
+
+[node name="Salir" type="Button" parent="."]
+offset_left = 517.0
+offset_top = 500.0
+offset_right = 975.0
+offset_bottom = 958.0
+scale = Vector2(0.3, 0.3)
+icon = ExtResource("4_2r5cw")
+flat = true
+
+[connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]

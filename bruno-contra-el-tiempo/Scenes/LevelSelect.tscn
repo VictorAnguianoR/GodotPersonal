@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://bdip7hel4sxx2"]
+
+[ext_resource type="Script" path="res://Scenes/LevelSelect.gd" id="1_pfa5d"]
+[ext_resource type="Texture2D" uid="uid://bcrt4j5nm2ykr" path="res://Assets/imagen fondo niveles.jpg" id="1_ruhrk"]
+[ext_resource type="Texture2D" uid="uid://bn8bv15h5jeok" path="res://Assets/01.png" id="2_is223"]
+[ext_resource type="Texture2D" uid="uid://bygcwoystur7u" path="res://Assets/02.png" id="3_71gmm"]
+[ext_resource type="Texture2D" uid="uid://bxsnujgmlqitp" path="res://Assets/03.png" id="4_3se5s"]
+[ext_resource type="FontFile" uid="uid://1ysxts0xtewe" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="6_purey"]
+[ext_resource type="Texture2D" uid="uid://ue58qh67san0" path="res://Assets/Back.png" id="7_koclx"]
+
+[node name="LevelSelect" type="Node2D"]
+script = ExtResource("1_pfa5d")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(565, 317.5)
+scale = Vector2(1.25778, 1.045)
+texture = ExtResource("1_ruhrk")
+
+[node name="Nivel 1" type="Button" parent="."]
+texture_filter = 1
+offset_left = 202.0
+offset_top = 268.0
+offset_right = 229.0
+offset_bottom = 293.0
+scale = Vector2(5, 5)
+action_mode = 0
+icon = ExtResource("2_is223")
+flat = true
+
+[node name="Nivel 2" type="Button" parent="."]
+texture_filter = 1
+offset_left = 498.0
+offset_top = 268.0
+offset_right = 525.0
+offset_bottom = 293.0
+scale = Vector2(5, 5)
+disabled = true
+icon = ExtResource("3_71gmm")
+flat = true
+
+[node name="Nivel 3" type="Button" parent="."]
+texture_filter = 1
+offset_left = 796.0
+offset_top = 275.0
+offset_right = 823.0
+offset_bottom = 300.0
+scale = Vector2(5, 5)
+disabled = true
+icon = ExtResource("4_3se5s")
+flat = true
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 4
+offset_left = 263.0
+offset_top = 63.0
+offset_right = 567.0
+offset_bottom = 86.0
+scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("6_purey")
+text = "Selecciona un nivel"
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+offset_left = 67.0
+offset_top = 26.0
+offset_right = 90.0
+offset_bottom = 50.0
+scale = Vector2(4, 4)
+icon = ExtResource("7_koclx")
+flat = true
+
+[connection signal="pressed" from="Nivel 1" to="." method="_on_Nivel_1_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
